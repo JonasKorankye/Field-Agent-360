@@ -102,7 +102,8 @@ public class MainActivity extends AgentLocationActivity implements NavigationVie
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                             }
-                        }).setIcon(R.drawable.baseline_warning_24).setTitle("Alert");
+                        }).setIcon(getResources().getDrawable(android.R.drawable.ic_dialog_alert))
+                        .setTitle("Alert");
                 ;
 
                 alertDialog.show();

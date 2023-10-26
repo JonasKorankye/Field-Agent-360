@@ -6,7 +6,7 @@
     android:clickable="true"
     android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
@@ -17,7 +17,7 @@
         android:textSize="18dp" />
 
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -26,13 +26,13 @@
         android:paddingRight="16dp"
         android:paddingTop="8dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Bank" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/bank_selector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,14 +41,14 @@
             android:padding="16dp"
             android:text="Select Bank" />
 
-        <android.support.v7.widget.AppCompatImageView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/drp_down"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:src="@drawable/ic_arrow_right_white_24dp"
             android:tint="@color/colorPrimary" />
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
         android:layout_marginRight="16dp"
         android:background="#ddd" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -66,13 +66,13 @@
         android:paddingRight="16dp"
         android:paddingTop="8dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Account No." />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/accountNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
             android:textSize="14dp" />
 
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:layout_width="match_parent"
@@ -94,7 +94,7 @@
         android:layout_marginRight="16dp"
         android:background="#ddd" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -103,13 +103,13 @@
         android:paddingRight="16dp"
         android:paddingTop="8dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Customer Pin." />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/customerPin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -122,7 +122,7 @@
             android:textSize="14dp" />
 
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:layout_width="match_parent"
@@ -132,7 +132,7 @@
         android:background="#ddd" />
 
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -141,13 +141,13 @@
         android:paddingRight="16dp"
         android:paddingTop="8dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Amount" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/amountField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -160,7 +160,7 @@
             android:textSize="14dp" />
 
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     <View
@@ -170,7 +170,7 @@
         android:layout_marginRight="16dp"
         android:background="#ddd" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -179,13 +179,13 @@
         android:paddingRight="16dp"
         android:paddingTop="8dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="OTP" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/otp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -198,7 +198,7 @@
             android:textSize="14dp" />
 
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:layout_width="match_parent"
@@ -207,7 +207,7 @@
         android:layout_marginRight="16dp"
         android:background="#ddd" />
 
-    <android.support.v7.widget.LinearLayoutCompat
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
@@ -216,13 +216,13 @@
         android:paddingRight="16dp"
         android:paddingTop="8dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:text="Agent Pin." />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/agentPin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -235,7 +235,7 @@
             android:textSize="14dp" />
 
 
-    </android.support.v7.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <View
         android:layout_width="match_parent"
@@ -245,7 +245,7 @@
         android:background="#ddd" />
 
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/makeTransfer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
