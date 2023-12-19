@@ -1,11 +1,15 @@
 package express.field.agent.Request;
 
+import static com.android.volley.Request.Method.POST;
+import static express.field.agent.Request.provider.JsonRpcProvider.getJsonRpc;
+
 import android.content.Context;
 import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 
@@ -14,9 +18,15 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import express.field.agent.AgentApplication;
-import express.field.agent.Constants;
+import express.field.agent.Helpers.ContextProvider;
+import express.field.agent.Helpers.VolleyErrorHelper;
+import express.field.agent.Request.net.BaseCall;
+import express.field.agent.Request.net.JsonRpcCall;
+import express.field.agent.Utils.Constants;
 import express.field.agent.Model.AgentModel;
 import express.field.agent.Model.RequestObject;
 import express.field.agent.Pref.AppPref;
@@ -46,7 +56,7 @@ public class AgentRequest {
                             JSONObject response = null;
                             try {
                                 response = responseArray.getJSONObject(0);
-                                onBalanceRetrieved(true, (float)response.optDouble("CurrentBalance"), response.optString("Name"));
+                                onBalanceRetrieved(true, (float) response.optDouble("CurrentBalance"), response.optString("Name"));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                                 Log.d("current balance", e.getMessage());
@@ -63,7 +73,7 @@ public class AgentRequest {
                 }
             });
 
-           AgentApplication.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
+            AgentApplication.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
 
         }
 
@@ -127,7 +137,6 @@ public class AgentRequest {
         public void getRequestObject(Context context, String link, final String key) {
             String tag_json_obj = "reqObj";
 
-
             JsonArrayRequest jsonObjReq = new JsonArrayRequest(Request.Method.GET,
                     link, null,
                     new Response.Listener<JSONArray>() {
@@ -173,7 +182,7 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.fund_transfer + requestObject.getId() + "/" + acctNo + "/" + narration + "/" + amount + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
                     new Response.Listener<JSONObject>() {
 
@@ -199,7 +208,7 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.airtime_vending + requestObject.getId() + "/" + phone + "/" + amount + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
                     new Response.Listener<JSONObject>() {
 
@@ -225,7 +234,7 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.bill_payment + requestObject.getId() + "/" + customerID + "/" + amount + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
                     new Response.Listener<JSONObject>() {
 
@@ -251,22 +260,10 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.revenue_collection + requestObject.getId() + "/" + customerID + "/" + amount + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
-                    new Response.Listener<JSONObject>() {
-
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            onRequestComplete(response.optBoolean("Success"), response.optString("Message"));
-
-                        }
-                    }, new Response.ErrorListener() {
-
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    onRequestComplete(false, error.getMessage());
-                }
-            });
+                    response -> onRequestComplete(response.optBoolean("Success"), response.optString("Message")),
+                    error -> onRequestComplete(false, error.getMessage()));
 
             AgentApplication.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
         }
@@ -276,7 +273,7 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.bank_deposit + requestObject.getId() + "/" + accountNumber + "/" + amount + "/" + agentPin + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
                     new Response.Listener<JSONObject>() {
 
@@ -302,7 +299,7 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.bank_withdrawal + requestObject.getId() + "/" + accountNumber + "/" + customerPin + "/" + otp + "/" + amount + "/" + agentPin + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
                     new Response.Listener<JSONObject>() {
 
@@ -329,7 +326,7 @@ public class AgentRequest {
 
             String link = Constants.UrlConstant.acct_opening + details + "/" + new AppPref().getStringValue(context, AppPref.AGENT_EMAIL) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LAT) + "/" + new AppPref().getFloatValue(context, AppPref.AGENT_LNG) + "/";
 
-            JsonObjectRequest jsonObjReq = new JsonObjectRequest(Request.Method.POST,
+            JsonObjectRequest jsonObjReq = new JsonObjectRequest(POST,
                     link, null,
                     new Response.Listener<JSONObject>() {
 

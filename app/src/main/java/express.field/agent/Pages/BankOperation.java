@@ -19,7 +19,7 @@ import express.field.agent.Pages.Banks.AccountOpening;
 import express.field.agent.Pages.Banks.BankDeposit;
 import express.field.agent.Pages.Banks.BankWithdrawal;
 import express.field.agent.R;
-import express.field.agent.FunUtils;
+import express.field.agent.Utils.FunUtils;
 
 /**
  * Created by myron echenim  on 8/23/16.

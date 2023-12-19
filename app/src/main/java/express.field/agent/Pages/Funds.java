@@ -15,14 +15,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import express.field.agent.Adapters.BankOperationAdapter;
-import express.field.agent.Constants;
+import express.field.agent.Utils.Constants;
 import express.field.agent.FragmentPages;
 import express.field.agent.Pages.FundsPages.Acct2Acct;
 import express.field.agent.Pages.FundsPages.Acct2Cash;
 import express.field.agent.Pages.FundsPages.CashToAcct;
 import express.field.agent.Pages.FundsPages.CashToCash;
 import express.field.agent.R;
-import express.field.agent.FunUtils;
+import express.field.agent.Utils.FunUtils;
 
 /**
  * Created by myron echenim  on 8/14/16.

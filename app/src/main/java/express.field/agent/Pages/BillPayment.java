@@ -12,14 +12,14 @@ import androidx.appcompat.widget.AppCompatTextView;
 
 import java.util.ArrayList;
 
-import express.field.agent.Constants;
+import express.field.agent.Utils.Constants;
 import express.field.agent.Dialogs.RequestObjSelectorDialog;
 import express.field.agent.FragmentPages;
 import express.field.agent.Model.RequestObject;
 import express.field.agent.ProcessDialog;
 import express.field.agent.R;
 import express.field.agent.Request.AgentRequest;
-import express.field.agent.FunUtils;
+import express.field.agent.Utils.FunUtils;
 
 /**
  * Created by myron echenim  on 8/14/16.

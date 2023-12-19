@@ -1,12 +1,18 @@
 package express.field.agent;
 
 import android.app.Application;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.mikepenz.iconics.Iconics;
+
+import java.util.Locale;
 
 /**
  * Created by myron echenim  on 8/14/16.
@@ -25,11 +31,14 @@ public class AgentApplication extends Application {
     public void onCreate() {
         super.onCreate();
         mInstance = this;
+
     }
 
     public static synchronized AgentApplication getInstance() {
         return mInstance;
     }
+
+
 
     public RequestQueue getRequestQueue() {
         if (mRequestQueue == null) {

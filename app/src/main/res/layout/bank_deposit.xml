@@ -6,24 +6,16 @@
     android:clickable="true"
     android:orientation="vertical">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:gravity="center_horizontal"
-        android:padding="16dp"
-        android:text="Bank Deposit"
-        android:textColor="@color/white"
-        android:textSize="18dp" />
+   <include layout="@layout/app_bar_pages"/>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#fff"
         android:orientation="horizontal"
-        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
@@ -62,9 +54,9 @@
         android:layout_height="wrap_content"
         android:background="#fff"
         android:orientation="horizontal"
-        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
@@ -100,9 +92,9 @@
         android:layout_height="wrap_content"
         android:background="#fff"
         android:orientation="horizontal"
-        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
@@ -120,7 +112,7 @@
             android:maxLength="10"
             android:padding="16dp"
             android:textColorHint="#ddd"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
@@ -139,9 +131,9 @@
         android:layout_height="wrap_content"
         android:background="#fff"
         android:orientation="horizontal"
-        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp">
+        android:paddingBottom="8dp">
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="150dp"
@@ -159,7 +151,7 @@
             android:maxLength="32"
             android:padding="16dp"
             android:textColorHint="#ddd"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>

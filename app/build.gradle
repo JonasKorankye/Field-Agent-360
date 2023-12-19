@@ -40,26 +40,35 @@ dependencies {
     // Add for Android-Iconics support
     implementation "com.mikepenz:materialdrawer-iconics:9.0.2"
 
+//circle images
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     //required support lib modules
     implementation "androidx.appcompat:appcompat:${versions.appcompat}"
     implementation "androidx.cardview:cardview:${versions.cardView}"
     implementation "androidx.recyclerview:recyclerview:${versions.recyclerView}"
     implementation "androidx.annotation:annotation:${versions.annotation}"
-    implementation 'com.google.android.material:material:1.11.0-alpha03'
+    implementation 'com.google.android.material:material:1.12.0-alpha01'
     // requires at least 1.5.0-x
     implementation "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
 
     //compile 'com.android.support:multidex:1.0.0'
 
     //compile 'com.jjoe64:graphview:4.2.1'
-   // compile 'com.android.support:percent:25.3.1'
+    // compile 'com.android.support:percent:25.3.1'
     implementation 'com.loopj.android:android-async-http:1.4.11'
+
+    implementation "androidx.security:security-crypto:1.1.0-alpha04"
+
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation 'com.couchbase.lite:couchbase-lite-android:3.0.0'
 
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'com.google.android.gms:play-services:12.0.1'
-   // compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    // compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.android.support:support-annotations:28.0.0'
@@ -69,4 +78,18 @@ dependencies {
 
     // Lottie Animation Library
     implementation 'com.airbnb.android:lottie:6.0.0'
+
+
+    //rootbeer
+    implementation 'com.scottyab:rootbeer-lib:0.0.7'
+
+    // JWT
+    implementation('com.nimbusds:nimbus-jose-jwt:9.18')
+    implementation 'org.bouncycastle:bcpkix-jdk15on:1.56'
+    implementation "com.madgag.spongycastle:core:1.58.0.0"
+    implementation "com.madgag.spongycastle:prov:1.58.0.0"
+
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-jackson:2.9.0'
 }

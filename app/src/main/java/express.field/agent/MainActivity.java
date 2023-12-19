@@ -31,6 +31,7 @@ import express.field.agent.Pages.Funds;
 import express.field.agent.Pages.RevenueCollection;
 import express.field.agent.Pref.AppPref;
 import express.field.agent.Request.AgentRequest;
+import express.field.agent.Utils.FunUtils;
 
 /**
  * Created by jonas korankye  on 17/10/23.
@@ -226,7 +227,7 @@ public class MainActivity extends AgentLocationActivity implements NavigationVie
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_home:
-                if (!FunUtils.isApplicationBroughtToBackground(this)) {
+                if (FunUtils.isApplicationBroughtToBackground(this)) {
                     recreate();
                 } else {
                     FunUtils.openActivity(this, MainActivity.class);

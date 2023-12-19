@@ -1,4 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable-hdpi/location_icon.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable-hdpi/password_icon.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/gradient_line.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/ic_baseline_call_24.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/ic_baseline_help_24.xml" value="0.1515" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/drawable/login_drawable.xml" value="0.1245" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/activity_splash_screen.xml" value="0.2" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/agent_login.xml" value="0.25" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/agent_login_a.xml" value="0.2" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/app_bar_main.xml" value="0.19375" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/app_bar_pages.xml" value="0.2171875" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/bank_deposit.xml" value="0.1671875" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/bills.xml" value="0.1671875" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/item_selector_item.xml" value="0.16354166666666667" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/item_selector_list.xml" value="0.16354166666666667" />
+        <entry key="..\:/JONNSS/Field-Agent-360/app/src/main/res/layout/transaction_complete.xml" value="0.16354166666666667" />
+        <entry key="..\:/SG__/PREMIER_RELOADED/premier/Premier/caches/transforms-3/bad539a19ced42b868f95fa4a6b35f53/transformed/jetified-MaterialDialog-2.1/res/layout-land/layout_alert_dialog.xml" value="0.264" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

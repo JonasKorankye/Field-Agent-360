@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#005fa4</color>
-    <color name="colorPrimaryDark">#005fa4</color>
+    <color name="colorPrimaryDark">#2D55CC</color>
     <color name="colorAccent">#FF4081</color>
     <color name="white">#FFFFFF</color>
     <color name="disable">#dddddd</color>
@@ -13,4 +13,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="lavender">#8692f7</color>
+
+    <color name="splash_color_1">#2D55CC</color>
+    <color name="splash_color_2">#264CBF</color>
+    <color name="splash_color_3">#1A3DAA</color>
+    <color name="splash_color_4">#13349E</color>
 </resources>

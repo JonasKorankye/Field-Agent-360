@@ -1,8 +1,19 @@
 <resources>
-    <string name="app_name">AGENTS-360&amp;#176</string>
+    <string name="app_name">AGENCY-360°</string>
+    <string name="splash_tagline">A wholesome package for agency...</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
     <string name="open_navigation_drawer">Open navigation drawer</string>
     <string name="close_navigation_drawer">Close navigation drawer</string>
     <string name="naira">₦</string>
+    <string name="deposit_title">Bank Deposit</string>
+    <string name="generic_server_down">Server is generally down</string>
+    <string name="generic_error">unkknown Server Error</string>
+    <string name="no_internet">Internet Unavailable</string>
+    <string name="crash_error_message_unknown">unknown crash error</string>
+    <string name="device_admin_description">Device Admin Desription</string>
+    <string name="security_rooted_device">Security Breached, device is rooted</string>
+    <string name="security_emulator_dialog_message">Security Breached, device is emulator</string>
+    <string name="security_tamper_dialog_message">Security Breached, device is Tempered</string>
+
 </resources>

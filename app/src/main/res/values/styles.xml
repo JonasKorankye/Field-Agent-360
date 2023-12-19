@@ -1,11 +1,15 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme"  parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
 
         <!-- Customize your theme here. -->
         <item name="material_dialog_background">#FFFFFF</item>
@@ -16,11 +20,15 @@
         <item name="material_dialog_negative_button_text_color">@color/colorAccent</item>
     </style>
 
-    <style name="AppThemeNoBar" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeNoBar"  parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+
+        <item name="colorControlNormal">#c5c5c5</item>
+        <item name="colorControlActivated">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
     </style>
 
     <style name="SampleApp.DayNight" parent="Theme.Material3.DayNight.NoActionBar">
@@ -28,6 +36,11 @@
         <item name="materialDrawerStyle">@style/Widget.MaterialDrawerStyle</item>
         <item name="materialDrawerHeaderStyle">@style/Widget.MaterialDrawerHeaderStyle</item>
 
+    </style>
+
+    <style name="DialogMaterialButtonOkay" parent="Widget.Material3.Button.UnelevatedButton">
+        <item name="background">@color/colorPrimary</item>
+        <item name="backgroundTint">@color/splash_color_2</item>
     </style>
 
 </resources>

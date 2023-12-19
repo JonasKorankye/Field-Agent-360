@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 /**
- * Created by myron echenim  on 8/16/16.
+ * Created by jonas korankye  on 17/10/23.
  */
 public class RequestObject implements Parcelable {
     String id, name;

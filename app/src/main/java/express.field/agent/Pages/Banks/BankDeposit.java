@@ -9,18 +9,19 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 
 import java.util.ArrayList;
 
-import express.field.agent.Constants;
+import express.field.agent.Utils.Constants;
 import express.field.agent.Dialogs.RequestObjSelectorDialog;
 import express.field.agent.FragmentPages;
 import express.field.agent.Model.RequestObject;
 import express.field.agent.ProcessDialog;
 import express.field.agent.R;
 import express.field.agent.Request.AgentRequest;
-import express.field.agent.FunUtils;
+import express.field.agent.Utils.FunUtils;
 
 /**
  * Created by myron echenim  on 8/25/16.
@@ -28,14 +29,26 @@ import express.field.agent.FunUtils;
 public class BankDeposit extends FragmentPages {
 
 
-    AppCompatTextView bankSelector;
+    AppCompatTextView bankSelector, pageTitle;
+    AppCompatImageView backButton;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.bank_deposit, container, false);
 
-        bankSelector = (AppCompatTextView) rootView.findViewById(R.id.bank_selector);
+        backButton = rootView.findViewById(R.id.back_button);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FunUtils.previousPage(getParentFragmentManager());
+            }
+        });
+
+        pageTitle = rootView.findViewById(R.id.page_title);
+        pageTitle.setText(R.string.deposit_title);
+
+        bankSelector = rootView.findViewById(R.id.bank_selector);
         bankSelector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.v7.widget.AppCompatEditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp">
 
-                <android.support.v7.widget.AppCompatEditText
+                <androidx.appcompat.widget.AppCompatEditText
 
                     android:id="@+id/password"
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                     android:maxLength="12"
                     android:paddingBottom="24dp" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <androidx.appcompat.widget.AppCompatButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"
@@ -65,7 +65,7 @@
             </FrameLayout>
         </LinearLayout>
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -75,7 +75,7 @@
             android:textSize="18dp" />
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

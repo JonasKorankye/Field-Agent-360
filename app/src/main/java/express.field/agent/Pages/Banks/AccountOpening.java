@@ -36,7 +36,7 @@ import express.field.agent.FragmentPages;
 import express.field.agent.ProcessDialog;
 import express.field.agent.R;
 import express.field.agent.Request.AgentRequest;
-import express.field.agent.FunUtils;
+import express.field.agent.Utils.FunUtils;
 
 /**
  * Created by myron echenim  on 8/23/16.

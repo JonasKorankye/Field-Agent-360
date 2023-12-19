@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/splash_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/disable">
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/splash_logo"-->
+    <!--        android:layout_width="216dp"-->
+    <!--        android:layout_height="210dp"-->
+    <!--        android:background="@drawable/splash"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/splash_logo"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:adjustViewBounds="true"-->
+    <!--        android:scaleType="fitXY"-->
+    <!--        android:src="@drawable/splash"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/splash_logo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="90dp"
+        android:src="@drawable/splash"
+        app:civ_border_color="#fff"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/agency_banking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="552dp"
+        android:layout_marginEnd="188dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_font_size_big"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/splash_logo"
+        app:layout_constraintStart_toStartOf="@+id/splash_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="70dp"
+        android:paddingBottom="6dp"
+        android:text="@string/splash_tagline"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_font_size_normal"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/splash_logo"
+        app:layout_constraintEnd_toEndOf="@+id/splash_logo"
+        app:layout_constraintStart_toStartOf="@+id/splash_logo"
+        app:layout_constraintTop_toTopOf="@+id/splash_logo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
